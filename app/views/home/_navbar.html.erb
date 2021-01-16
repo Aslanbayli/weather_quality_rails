@@ -1,0 +1,12 @@
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <%= link_to "My Ozone", root_path, class: "navbar-brand" %> 
+    <%= form_tag zipcode_path, :method => 'POST' do %>
+    <div class="d-flex">
+      <%= text_field_tag 'zipcode', nil, placeholder: "Search Zipcode", class: "form-control me-2" %>
+      <%= submit_tag 'Search', class: 'btn btn-outline-success' %>
+    </div>
+    <% end %>
+  </div>
+</nav>
